@@ -1,0 +1,85 @@
+### read all users
+get http://localhost:3000/product-api/products
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGdtYWlsIiwiaWF0IjoxNzcyODc4NDgxLCJleHAiOjE3NzI4ODIwODF9.VcQiDEIzU-odWDy2d3g1vFdktUU3trqK-sXPA1cvBA0; Path=/; SameSite=Lax
+
+
+### read a user by id
+get http://localhost:4000/product-api/products
+
+### create new user
+POST http://localhost:4000/product-api/products
+Content-Type: application/json 
+
+{
+    "productId":101,
+    "productName":"chocolate",
+    "price":20000,
+    "brand":"Kitkaat"
+   
+}
+
+
+###
+
+###
+put http://localhost:3000/product-api/products/101
+Content-Type: application/json
+
+{
+    "productId":102,
+    "productName":"chocolates",
+    "price":20000,
+    "brand":"Kitkat"
+   
+}
+
+###
+delete http://localhost:3000/product-api/products/101
+
+###read all users (req to protected route)
+get http://localhost:4000/user-api/users
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhaHVsQGdtYWlsIiwiaWF0IjoxNzcyODc4MDAzLCJleHAiOjE3NzI4NzgwMjN9.aOy-3LMYGzcaosemukH8ia5Wl2Auc8s9OcpwK4OECR4; Path=/; SameSite=Lax
+
+###
+get http://localhost:4000/user-api/user
+
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username":"Harsh",
+    "password":"Harsh",
+    "email":"Harsh@gmail",
+    "age":20
+}
+
+###
+post http://localhost:4000/user-api/auth  
+Content-Type: application/json
+
+{
+    "email":"Harsh@gmail",
+    "password":"Harsh"
+}
+
+###
+Put http://localhost:4000/user-api/cart/product-id/69b25dac2f11d837ea6c71eb
+
+
+###
+put http://localhost:4000/user-api/users/69abeef673dc6a60c7d4a5b3
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhbXVAZ21haWwiLCJpYXQiOjE3NzI4NzYyNzMsImV4cCI6MTc3Mjg3OTg3M30.9nQ9kGoc-aK48yW8L0GU2-dKrROFCXpaNqAOF5HPlbg; Path=/; SameSite=Lax
+Content-Type: application/json
+
+{
+    "username":"ramua",
+    "password":"ramu",
+    "email":"ramu@gmail",
+    "age":20
+}
+
+###
+delete http://localhost:4000/user-api/users
+
+

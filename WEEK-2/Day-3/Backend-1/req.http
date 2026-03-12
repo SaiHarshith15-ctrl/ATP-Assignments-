@@ -1,0 +1,35 @@
+### read all users
+get http://localhost:3000/product-api/Products
+
+
+### read a user by id
+get http://localhost:3000/product-api/Products/kitkat
+
+### create new user
+POST http://localhost:3000/product-api/Products
+Content-Type: application/json 
+
+{
+    "productId":2,
+    "name":"chocolate",
+    "brand":"kitkat",
+    "price":100
+    
+}
+
+###
+put http://localhost:3000//product-api/Products
+Content-Type: application/json
+
+{
+    "id":4,
+    "name":"harsh",
+    "age":20
+
+}
+
+###
+delete http://localhost:3000/product-api/Products/2
+
+###
+get http://localhost:3000/user-api/users
